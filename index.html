@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nightcore Roleplay</title>
-    <link rel="stylesheet" href="alap.css" class="a">
+    <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <style>
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #333;
+                text-align: center;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,7 +39,7 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Főoldal</a></li>
-                <li><a href="szabályzat.html">Szabályzat</a></li>
+                <li><a href="szabalyzat.html">Szabályzat</a></li>
                 <li><a href="csatlakozas.html">Csatlakozás</a></li>
                 <li><a href="kapcsolat.html">Kapcsolat</a></li>
             </ul>
@@ -31,13 +57,19 @@
         <section class="server-status">
             <h2>Szerver Állapota</h2>
             <div id="server-info">
-                <p> Üzemel </p>
+                <p>Üzemel</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Nightcore Roleplay </p>
+        <p>&copy; 2025 Nightcore Roleplay</p>
     </footer>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
