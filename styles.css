@@ -9,17 +9,18 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     color: rgb(72,209,204);
-    background: url('képek/Flux_Schnell_Create_a_vibrant_illustration_that_embodies_the_e_2.jpeg'); 
-
+    background: url('képek/Flux_Schnell_Create_a_vibrant_illustration_that_embodies_the_e_2.jpeg');
 }
 
-.szabalyzat{font-family: 'Arial', sans-serif;
+.szabalyzat {
+    font-family: 'Arial', sans-serif;
     text-align: center;
-
-
 }
 
-
+a {
+    color: red;
+    font-weight: bold;
+}
 
 /* Fejléc és menü */
 header {
