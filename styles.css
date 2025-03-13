@@ -61,10 +61,11 @@ nav {
     color: white;
 }
 
+
 /* Reszponzív dizájn */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: none; /* Alapértelmezetten elrejtve */
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -79,6 +80,6 @@ nav {
     }
 
     .hamburger {
-        display: block;
+        display: block; /* Mobilon megjelenik */
     }
 }
