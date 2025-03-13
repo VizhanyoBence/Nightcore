@@ -59,6 +59,7 @@ nav {
     font-size: 28px;
     cursor: pointer;
     color: white;
+    display: block; /* Mobilon megjelenik */
 }
 
 
@@ -79,7 +80,5 @@ nav {
         margin: 15px 0;
     }
 
-    .hamburger {
-        display: block; /* Mobilon megjelenik */
-    }
+   
 }
