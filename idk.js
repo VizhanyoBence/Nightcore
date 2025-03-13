@@ -1,5 +1,28 @@
 // script.js
 
+// fetchServerStatus függvény definíciója
+async function fetchServerStatus() {
+    const serverInfo = document.getElementById('server-info');
+    try {
+        let response = await fetch('https://example.com/api/server-status');
+        let data = await response.json();
+        if (data.online) {
+            serverInfo.innerHTML = `<p style="color: green;">Online</p>
+                                   <p>Jelenlegi játékosok: ${data.players}/100</p>`;
+        } else {
+            serverInfo.innerHTML = `<p style="color: red;">Offline</p>`;
+        }
+    } catch (error) {
+        serverInfo.innerHTML = `<p style="color: red;">Hiba történt a szerver állapot lekérésekor.</p>`;
+    }
+}
+
+// Eseményfigyelő hozzáadása a DOM betöltődésekor
+document.addEventListener("DOMContentLoaded", function() {
+    fetchServerStatus(); // fetchServerStatus meghívása
+});
+
+
 // Hamburger menü működése mobilon
 
 function toggleMenu() {
@@ -35,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.querySelector('.hamburger').addEventListener('click', function() {
     console.log('Hamburger gombra kattintottál!');
 });
+
 
 /*// Szerver állapot dinamikus lekérése (példa egy API hívásra)
 async function fetchServerStatus() {
