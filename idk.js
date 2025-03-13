@@ -1,7 +1,13 @@
+// script.js
+
 // Hamburger menü működése mobilon
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
-    navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
+    if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+    } else {
+        navLinks.style.display = 'flex';
+    }
 }
 
 // Szerver állapot dinamikus lekérése (példa egy API hívásra)
@@ -26,3 +32,11 @@ async function fetchServerStatus() {
 
 // Betöltéskor lekéri a szerver állapotot
 document.addEventListener("DOMContentLoaded", fetchServerStatus);
+
+// Hamburger menü eseményfigyelő hozzáadása
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    }
+});
