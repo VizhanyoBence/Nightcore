@@ -2,15 +2,14 @@
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     if (navLinks.style.display === 'flex' || navLinks.style.display === '') {
-        navLinks.style.display = 'none';
+        navLinks.style.display = 'none'; // Menü elrejtése
     } else {
-        navLinks.style.display = 'flex';
+        navLinks.style.display = 'flex'; // Menü megjelenítése
     }
 }
 
 // Eseményfigyelő hozzáadása a DOM betöltődésekor
 document.addEventListener("DOMContentLoaded", function() {
-    // Hamburger gomb eseményfigyelő hozzáadása
     const hamburger = document.querySelector('.hamburger');
     if (hamburger) {
         hamburger.addEventListener('click', toggleMenu);
@@ -21,3 +20,4 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log('Hamburger gombra kattintottál!');
     });
 });
+

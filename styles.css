@@ -50,31 +50,41 @@ nav {
     color: #ff00ff;
 }
 
+/* Alapértelmezetten a menü látható asztali nézetben */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+/* Hamburger gomb alapértelmezetten elrejtve */
 .hamburger {
-    display: none; /* Alapértelmezetten elrejtve */
+    display: none;
     font-size: 28px;
     cursor: pointer;
     color: white;
 }
 
-/* Reszponzív stílusok */
+/* Mobilnézet (768px-nél kisebb képernyő) */
 @media (max-width: 768px) {
+    /* A menü elrejtése mobilon */
     .nav-links {
-        display: none; /* Alapértelmezetten elrejtve */
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 60px; /* A fejléc alatt jelenjen meg */
         right: 0;
         background: rgba(0, 0, 0, 0.8);
         width: 200px;
         text-align: center;
     }
 
+    /* Menü elemek stílusa mobilon */
     .nav-links li {
         margin: 15px 0;
     }
 
+    /* Hamburger gomb megjelenítése mobilon */
     .hamburger {
-        display: block; /* Mobilon megjelenik */
+        display: block;
     }
 }
