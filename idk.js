@@ -1,6 +1,7 @@
 // script.js
 
-// Hamburger menü működése
+// Hamburger menü működése mobilon
+
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     if (navLinks.style.display === 'flex' || navLinks.style.display === '') {
@@ -10,6 +11,7 @@ function toggleMenu() {
     }
 }
 
+
 // Eseményfigyelő hozzáadása a hamburger gombhoz
 document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.querySelector('.hamburger');
@@ -17,7 +19,24 @@ document.addEventListener("DOMContentLoaded", function() {
         hamburger.addEventListener('click', toggleMenu);
     }
 });
-// Szerver állapot dinamikus lekérése (példa egy API hívásra)
+
+
+// Betöltéskor lekéri a szerver állapotot
+document.addEventListener("DOMContentLoaded", fetchServerStatus);
+
+// Hamburger menü eseményfigyelő hozzáadása
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    }
+});
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+    console.log('Hamburger gombra kattintottál!');
+});
+
+/*// Szerver állapot dinamikus lekérése (példa egy API hívásra)
 async function fetchServerStatus() {
     const serverInfo = document.getElementById('server-info');
 
@@ -36,18 +55,4 @@ async function fetchServerStatus() {
         serverInfo.innerHTML = `<p style="color: red;">Hiba történt a szerver állapot lekérésekor.</p>`;
     }
 }
-
-// Betöltéskor lekéri a szerver állapotot
-document.addEventListener("DOMContentLoaded", fetchServerStatus);
-
-// Hamburger menü eseményfigyelő hozzáadása
-document.addEventListener("DOMContentLoaded", function() {
-    const hamburger = document.querySelector('.hamburger');
-    if (hamburger) {
-        hamburger.addEventListener('click', toggleMenu);
-    }
-});
-
-document.querySelector('.hamburger').addEventListener('click', function() {
-    console.log('Hamburger gombra kattintottál!');
-});
+*/ 
