@@ -1,6 +1,4 @@
-/* styles.css */
-
-/* Alapbeállítások */
+/* Alapstílusok */
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +6,12 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
-    color: rgb(72,209,204);
+    color: rgb(72, 209, 204);
     background: url('képek/Flux_Schnell_Create_a_vibrant_illustration_that_embodies_the_e_2.jpeg');
 }
 
-/* Fejléc és menü */
 header {
     display: flex;
     justify-content: space-between;
@@ -53,17 +50,14 @@ nav {
     color: #ff00ff;
 }
 
-/* Hamburger Menü Mobilra */
 .hamburger {
-    display: none;
+    display: none; /* Alapértelmezetten elrejtve */
     font-size: 28px;
     cursor: pointer;
     color: white;
-    
 }
 
-
-/* Reszponzív dizájn */
+/* Reszponzív stílusok */
 @media (max-width: 768px) {
     .nav-links {
         display: none; /* Alapértelmezetten elrejtve */
