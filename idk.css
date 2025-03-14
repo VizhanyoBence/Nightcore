@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* Alapbeállítások */
 * {
     margin: 0;
@@ -8,23 +10,10 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    color:  rgb(72,209,204);
-    background-color:  rgb(105,105,105);
-    
-
+    color: rgb(72,209,204);
+    background: url('képek/Flux_Schnell_Create_a_vibrant_illustration_that_embodies_the_e_2.jpeg');
 }
 
-.szabalyzat{font-family: 'Arial', sans-serif;
-    text-align: center;
-
-
-}
-
-a
-{
-color: red;
-font-weight: bold;
-}
 /* Fejléc és menü */
 header {
     display: flex;
@@ -69,54 +58,15 @@ nav {
     display: none;
     font-size: 28px;
     cursor: pointer;
-}
-
-/* Hero szekció */
-.hero {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    padding: 10px 20px;
-    font-size: 18px;
     color: white;
-    background: #ff00ff;
-    text-decoration: none;
-    border-radius: 5px;
+    
 }
 
-.btn:hover {
-    background: #d100d1;
-}
-
-/* Szerver állapot */
-.server-status {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-}
 
 /* Reszponzív dizájn */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: none; /* Alapértelmezetten elrejtve */
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -131,6 +81,6 @@ nav {
     }
 
     .hamburger {
-        display: block;
+        display: block; /* Mobilon megjelenik */
     }
 }
